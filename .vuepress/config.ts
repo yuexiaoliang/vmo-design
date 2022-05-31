@@ -27,7 +27,7 @@ export default defineUserConfig({
   ],
 
   theme: defaultTheme({
-    home: '/',
+    home: '/index.md',
     logo: 'https://cdn.jsdelivr.net/npm/@vant/assets/logo.png',
     repo: 'https://github.com/yuexiaoliang/vmo-design',
     editLinkText: '在 GitHub 上编辑此页',
