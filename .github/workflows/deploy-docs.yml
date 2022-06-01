@@ -23,5 +23,5 @@ jobs:
       env:
         REPO: git@github.com:yuexiaoliang/vmo-design-docs.git
         BRANCH: master
-        FOLDER: docs
+        FOLDER: .vuepress/dist
         SSH_PRIVATE_KEY: ${{ secrets.MAC_SSH_KEY }}
