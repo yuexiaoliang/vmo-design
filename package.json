@@ -4,8 +4,8 @@
   "description": "一个没啥创意的 Vue 物料库",
   "main": "index.js",
   "scripts": {
-    "dev:docs": "vuepress dev ./",
-    "build:docs": "vuepress build ./"
+    "docs:dev": "vuepress dev ./",
+    "docs:build": "vuepress build ./"
   },
   "author": "",
   "license": "ISC",
