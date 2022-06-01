@@ -26,6 +26,27 @@ export default defineUserConfig({
     })
   ],
 
+  markdown: {
+    importCode: {
+      handleImportPath(importPath) {
+        let res = importPath;
+        if (importPath.startsWith('~/')) {
+          res = importPath.replace('~/', './demo/');
+        }
+
+        if (importPath.startsWith('@/')) {
+          res = importPath.replace('@', path.resolve(root, 'src'));
+        }
+
+        if (importPath.startsWith('_/')) {
+          res = importPath.replace('_', root);
+        }
+
+        return res;
+      }
+    }
+  },
+
   theme: defaultTheme({
     home: '/index.md',
     logo: 'https://cdn.jsdelivr.net/npm/@vant/assets/logo.png',
