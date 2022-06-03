@@ -7,6 +7,6 @@ export const navbar: NavbarConfig = [
   },
   {
     text: '组件',
-    link: '/src/'
+    link: '/components/'
   }
 ];

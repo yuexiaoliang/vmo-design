@@ -9,7 +9,7 @@ const root = path.resolve(__dirname, '../');
 export default defineUserConfig({
   lang: 'zh-CN',
   title: 'Vmo Design',
-  description: '一个没啥创意的 Vue 物料库',
+  description: '一个没啥创意的 Vue 组件库',
 
   port: 8890,
   temp: path.resolve(root, '.vuepress/.temp'),
@@ -19,7 +19,7 @@ export default defineUserConfig({
 
   plugins: [
     registerComponentsPlugin({
-      componentsDir: path.resolve(root, './src'),
+      componentsDir: path.resolve(root, './components'),
       getComponentName: (filePath) => {
         return filePath.replace(/^.*\/demo\/([^/]+)\.vue$/, '$1');
       }
@@ -35,7 +35,7 @@ export default defineUserConfig({
         }
 
         if (importPath.startsWith('@/')) {
-          res = importPath.replace('@', path.resolve(root, 'src'));
+          res = importPath.replace('@', path.resolve(root, 'components'));
         }
 
         if (importPath.startsWith('_/')) {
@@ -49,7 +49,7 @@ export default defineUserConfig({
 
   theme: defaultTheme({
     home: '/index.md',
-    logo: 'https://cdn.jsdelivr.net/npm/@vant/assets/logo.png',
+    logo: 'images/logo.png',
     repo: 'https://github.com/yuexiaoliang/vmo-design',
     editLinkText: '在 GitHub 上编辑此页',
     lastUpdatedText: '上次更新于',

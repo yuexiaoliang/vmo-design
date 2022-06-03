@@ -1,7 +1,7 @@
 {
   "name": "vmo-design",
   "version": "0.0.1",
-  "description": "一个没啥创意的 Vue 物料库",
+  "description": "一个没啥创意的 Vue 组件库",
   "main": "index.js",
   "scripts": {
     "docs:dev": "vuepress dev ./",

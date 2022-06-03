@@ -1,5 +1,7 @@
 # Vmo Design
 
+一个没啥创意的 Vue 组件库。
+
 ## TODO
 
 - [ ] I18n(vuepress)

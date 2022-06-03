@@ -7,14 +7,14 @@ export const sidebar: SidebarConfig = {
       children: ['/docs/guide/README.md']
     }
   ],
-  '/src/': [
+  '/components/': [
     {
       text: '基础组件',
-      children: ['/src/Button/README.md']
+      children: ['/components/Button/README.md']
     },
     {
       text: '测试组件',
-      children: ['/src/Test/README.md']
+      children: ['/components/Test/README.md']
     }
   ]
 };
