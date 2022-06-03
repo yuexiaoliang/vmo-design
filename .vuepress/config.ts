@@ -10,6 +10,7 @@ export default defineUserConfig({
   lang: 'zh-CN',
   title: 'Vmo Design',
   description: '一个没啥创意的 Vue 组件库',
+  head: [['link', { rel: 'icon', href: '/images/logo.png' }]],
 
   port: 8890,
   temp: path.resolve(root, '.vuepress/.temp'),
