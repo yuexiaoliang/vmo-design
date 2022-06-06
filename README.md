@@ -5,7 +5,7 @@
 ## TODO
 
 - [ ] I18n(vuepress)
-- [ ] pnpm
+- [x] pnpm
 - [ ] vite
 - [ ] vitest
 - [ ] vue3
