@@ -4,7 +4,7 @@
 
 ## TODO
 
-- [ ] I18n(vuepress)
+- [x] I18n(vuepress)
 - [x] pnpm
 - [ ] vite
 - [ ] vitest
