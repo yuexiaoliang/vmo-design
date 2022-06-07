@@ -3,10 +3,10 @@ home: true
 title: Home
 heroImage: images/logo.png
 actions:
-  - text: 开发指南
-    link: /docs/guide/
+  - text: Guide
+    link: /en/guide/
     type: primary
-  - text: 现有组件
-    link: /components/
+  - text: Components
+    link: /en/components/
     type: secondary
 ---

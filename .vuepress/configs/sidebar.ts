@@ -1,20 +1,20 @@
 import { SidebarConfig } from 'vuepress';
 
 export const sidebar: SidebarConfig = {
-  '/docs/': [
+  '/guide/': [
     {
       text: '文档',
-      children: ['/docs/guide/README.md']
+      children: ['/guide/']
     }
   ],
   '/components/': [
     {
       text: '基础组件',
-      children: ['/components/Button/README.md']
+      children: ['/components/Button/']
     },
     {
       text: '测试组件',
-      children: ['/components/Test/README.md']
+      children: ['/components/Test/']
     }
   ]
 };

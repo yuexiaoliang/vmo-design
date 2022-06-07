@@ -3,7 +3,7 @@ import { NavbarConfig } from 'vuepress';
 export const navbar: NavbarConfig = [
   {
     text: '文档',
-    link: '/docs/'
+    link: '/guide/'
   },
   {
     text: '组件',
