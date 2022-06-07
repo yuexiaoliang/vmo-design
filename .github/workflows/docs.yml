@@ -17,10 +17,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0
+          fetch-depth: 0        
           
-      - name: Yarn install cache
-        uses: c-hive/gha-yarn-cache@v1
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 6.32.4
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -28,10 +29,10 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Install dependencies
-        run: yarn
+        run: pnpm install
 
       - name: Build documentation site
-        run: yarn docs:build
+        run: pnpm docs:build
         
       - name: Create CNAME
         run: cd .vuepress/dist && echo "www.vmo.design" > CNAME
