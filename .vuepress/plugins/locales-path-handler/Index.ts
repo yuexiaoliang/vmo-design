@@ -1,4 +1,3 @@
-import { pageDataEmpty } from '@vuepress/client';
 import path from 'path';
 import { writeLog } from '../../../utils/common';
 
