@@ -6,10 +6,10 @@
 
 - [x] I18n(vuepress)
 - [x] pnpm
-- [ ] vite
+- [x] vite
 - [ ] vitest
 - [ ] vue3
-- [ ] typescript
+- [x] typescript
 - [ ] tsx
 - [ ] vue-tsc
 - [ ] Tailwind css
