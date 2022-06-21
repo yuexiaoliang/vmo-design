@@ -7,7 +7,7 @@
 - [x] I18n(vuepress)
 - [x] pnpm
 - [x] vite
-- [ ] vitest
+- [x] vitest
 - [ ] vue3
 - [x] typescript
 - [ ] tsx
