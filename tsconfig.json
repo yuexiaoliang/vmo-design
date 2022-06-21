@@ -9,7 +9,8 @@
     "declarationDir": "./types/",
     "emitDeclarationOnly": true,
     "rootDir": "./src",
-    "moduleResolution": "Node"
+    "moduleResolution": "Node",
+    "jsx": "preserve"
   },
   "include": [
     "src"

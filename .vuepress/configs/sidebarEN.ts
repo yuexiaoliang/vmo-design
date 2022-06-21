@@ -9,12 +9,16 @@ export const sidebarEN: SidebarConfig = {
   ],
   '/en/components/': [
     {
-      text: 'Base Components',
+      text: 'Base Component',
       children: ['/components/Button/README_EN.md']
     },
     {
-      text: 'Test Components',
+      text: 'Test Component',
       children: ['/components/Test/README_EN.md']
+    },
+    {
+      text: 'Jsx Component',
+      children: ['/components/JsxTest/README_EN.md']
     }
   ]
 };

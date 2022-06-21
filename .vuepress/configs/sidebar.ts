@@ -15,6 +15,10 @@ export const sidebar: SidebarConfig = {
     {
       text: '测试组件',
       children: ['/components/Test/']
+    },
+    {
+      text: 'Jsx 组件',
+      children: ['/components/JsxTest/']
     }
   ]
 };

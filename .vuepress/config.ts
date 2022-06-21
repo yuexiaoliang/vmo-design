@@ -1,8 +1,10 @@
+import path from 'path';
 import { defineUserConfig, defaultTheme } from 'vuepress';
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components';
-import path from 'path';
+import { viteBundler } from '@vuepress/bundler-vite';
 import { navbar, navbarEN, sidebar, sidebarEN } from './configs';
 import LocalesPathHandler from './plugins/locales-path-handler';
+import vueJsx from '@vitejs/plugin-vue-jsx';
 
 const root = path.resolve(__dirname, '../');
 
@@ -27,8 +29,10 @@ export default defineUserConfig({
   plugins: [
     registerComponentsPlugin({
       componentsDir: path.resolve(root, './components'),
+      componentsPatterns: ['**/*.{vue, jsx, tsx}'],
       getComponentName: (filePath) => {
-        return filePath.replace(/^.*\/demo\/([^/]+)\.vue$/, '$1');
+        const name = filePath.replace(/^.*\/demo\/([^/]+)\.(vue|jsx|tsx)$/, '$1');
+        return name;
       }
     }),
     LocalesPathHandler()
@@ -83,6 +87,12 @@ export default defineUserConfig({
         navbar: navbarEN,
         sidebar: sidebarEN
       }
+    }
+  }),
+
+  bundler: viteBundler({
+    viteOptions: {
+      plugins: [vueJsx({})]
     }
   })
 });
