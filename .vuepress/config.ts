@@ -1,8 +1,8 @@
 import path from 'path';
 import { defineUserConfig, defaultTheme } from 'vuepress';
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components';
-import { viteBundler } from '@vuepress/bundler-vite';
-import { navbar, navbarEN, sidebar, sidebarEN } from './configs';
+import { viteBundler } from 'vuepress';
+import { navbarCN, navbarUS, sidebarCN, sidebarUS } from './configs';
 import LocalesPathHandler from './plugins/locales-path-handler';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 
@@ -64,7 +64,7 @@ export default defineUserConfig({
     repo: 'https://github.com/yuexiaoliang/vmo-design',
     locales: {
       '/': {
-        home: '/docs/README.md',
+        home: '/docs/home.zh-CN.md',
         selectLanguageName: '简体中文',
         selectLanguageText: '选择语言',
         editLinkText: '在 GitHub 上编辑此页',
@@ -72,11 +72,11 @@ export default defineUserConfig({
         contributorsText: '贡献者',
         notFound: ['找不到页面哦～', '没有您要找的页面哦～'],
         backToHome: '返回首页',
-        navbar,
-        sidebar
+        navbar: navbarCN,
+        sidebar: sidebarCN
       },
       '/en': {
-        home: '/docs/README_EN.md',
+        home: '/docs/home.en-US.md',
         selectLanguageName: 'English',
         selectLanguageText: 'Languages',
         editLinkText: 'Edit this page on GitHub',
@@ -84,8 +84,8 @@ export default defineUserConfig({
         contributorsText: 'Contributors',
         notFound: ['Page not found', 'No page found'],
         backToHome: 'Back to home',
-        navbar: navbarEN,
-        sidebar: sidebarEN
+        navbar: navbarUS,
+        sidebar: sidebarUS
       }
     }
   }),

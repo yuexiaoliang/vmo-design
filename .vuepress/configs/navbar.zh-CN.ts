@@ -1,6 +1,6 @@
 import { NavbarConfig } from 'vuepress';
 
-export const navbar: NavbarConfig = [
+export const navbarCN: NavbarConfig = [
   {
     text: '文档',
     link: '/guide/'

@@ -7,25 +7,17 @@ export default () => {
     onInitialized(app) {
       // 剔除项目跟目录下的 README.md 文件
       const source = app.options.source;
-      const pages = app.pages.filter(
-        (page) =>
-          path.normalize(page.filePath || '') !==
-          path.normalize(source + '/README.md')
-      );
+      const pages = app.pages.filter((page) => path.normalize(page.filePath || '') !== path.normalize(source + '/README.md'));
 
       pages.forEach((page) => {
-        const { pathInferred, path, data, htmlFilePath, htmlFilePathRelative } =
-          page;
+        const { pathInferred, path, data, htmlFilePath, htmlFilePathRelative } = page;
         const dataPath = data.path;
         page.path = handlePath(path);
         page.data.path = handlePath(dataPath);
         page.pathInferred = handlePath(pathInferred);
 
         page.htmlFilePathRelative = handleDistPath(htmlFilePathRelative);
-        page.htmlFilePath = htmlFilePath.replace(
-          htmlFilePathRelative,
-          page.htmlFilePathRelative
-        );
+        page.htmlFilePath = htmlFilePath.replace(htmlFilePathRelative, page.htmlFilePathRelative);
       });
 
       app.pages = pages;
@@ -40,16 +32,19 @@ function handleDistPath(p) {
   if (!p) return p;
   let result = p;
 
-  const r1 = /.*\/+(?<fileName>.*_EN)\.html/;
-
-  if (r1.test(p)) {
-    result = 'en/' + p.replace(r1.exec(p).groups?.fileName, 'index');
+  const regUS = /.*(?<fileName>\/(index|home)\.en-US\.html)/;
+  if (regUS.test(p)) {
+    result = '/en/' + p.replace(regUS.exec(p)?.groups?.fileName, '/index.html');
   }
 
-  if (/^(en\/)?docs\//.test(result)) {
+  const regCN = /.*(?<fileName>\/(index|home)\.zh-CN\.html)/;
+  if (regCN.test(p)) {
+    result = '/' + p.replace(regCN.exec(p)?.groups?.fileName, '/index.html');
+  }
+
+  if (/^\/(en\/)?docs\//.test(result)) {
     result = result.replace(/docs\//, '');
   }
-
   return result;
 }
 
@@ -57,13 +52,18 @@ function handlePath(p) {
   if (!p) return p;
   let result = p;
 
-  const r1 = /.*\/+(?<fileName>.*_EN\.html)/;
-  if (r1.test(p)) {
-    result = '/en' + p.replace(r1.exec(p).groups?.fileName, '');
+  const regUS = /.*(?<fileName>\/(index|home)\.en-US\.html)/;
+  if (regUS.test(p)) {
+    result = '/en' + p.replace(regUS.exec(p)?.groups?.fileName, '/');
   }
 
-  if (/^(\/en)?\/docs\//.test(result)) {
-    result = result.replace(/\/docs\//, '/');
+  const regCN = /.*(?<fileName>\/(index|home)\.zh-CN\.html)/;
+  if (regCN.test(p)) {
+    result = p.replace(regCN.exec(p)?.groups?.fileName, '/');
+  }
+
+  if (/^\/(en\/)?docs/.test(result)) {
+    result = result.replace(/\/docs/, '');
   }
 
   return result;

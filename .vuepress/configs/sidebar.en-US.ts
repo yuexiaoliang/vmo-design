@@ -1,24 +1,24 @@
 import { SidebarConfig } from 'vuepress';
 
-export const sidebarEN: SidebarConfig = {
+export const sidebarUS: SidebarConfig = {
   '/en/guide/': [
     {
       text: 'Documentation',
-      children: ['/docs/guide/README_EN.md']
+      children: ['/docs/guide/index.en-US.md']
     }
   ],
   '/en/components/': [
     {
       text: 'Base Component',
-      children: ['/components/Button/README_EN.md']
+      children: ['/components/Button/index.en-US.md']
     },
     {
       text: 'Test Component',
-      children: ['/components/Test/README_EN.md']
+      children: ['/components/Test/index.en-US.md']
     },
     {
       text: 'Jsx Component',
-      children: ['/components/JsxTest/README_EN.md']
+      children: ['/components/JsxTest/index.en-US.md']
     }
   ]
 };

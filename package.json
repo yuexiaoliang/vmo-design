@@ -10,7 +10,7 @@
     "coverage": "vitest run --coverage",
     "docs:dev": "vuepress dev ./",
     "docs:build": "vuepress build ./",
-    "docs:review": "live-server .vuepress/dist/ --port=8090"
+    "docs:preview": "live-server .vuepress/dist/ --port=8090"
   },
   "author": "",
   "license": "ISC",

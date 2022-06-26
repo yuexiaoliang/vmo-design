@@ -1,4 +1,4 @@
-# JsxTest Components
+# JsxTest Component
 
 <JsxTest />
 

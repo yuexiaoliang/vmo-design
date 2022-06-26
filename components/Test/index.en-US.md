@@ -1,4 +1,4 @@
-# Test Components
+# Test Component
 
 <Test />
 
