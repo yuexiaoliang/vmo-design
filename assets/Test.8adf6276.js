@@ -1,0 +1,1 @@
+import{_ as s,f as t,I as o,o as a,c as _,t as c}from"./app.1cc4796f.js";const n={class:"test"},r=t({__name:"Test",setup(l){const e=o("Hello Test");return(p,f)=>(a(),_("div",n,c(e.value),1))}});var m=s(r,[["__file","Test.vue"]]);export{m as default};

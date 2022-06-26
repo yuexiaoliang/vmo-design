@@ -1,0 +1,1 @@
+const e={key:"v-f431668e",path:"/guide/",title:"\u5FEB\u901F\u5F00\u59CB",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1656227595e3,contributors:[{name:"yuexiaoliang",email:"2220124666@qq.com",commits:1}]},filePathRelative:"docs/guide/index.zh-CN.md"};export{e as data};

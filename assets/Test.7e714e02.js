@@ -1,0 +1,1 @@
+import e from"./Test.8adf6276.js";import{_ as t,f as o,o as s,q as r}from"./app.1cc4796f.js";const _=o({__name:"Test",setup(a){return(c,n)=>(s(),r(e))}});var m=t(_,[["__file","Test.vue"]]);export{m as default};

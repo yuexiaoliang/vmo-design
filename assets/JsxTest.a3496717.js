@@ -1,0 +1,1 @@
+import{f as s,d as t,_ as r,o as a,q as u,h as n}from"./app.1cc4796f.js";var o=s({name:"JsxTest",props:{msg:String},setup(e){return()=>t("div",null,[e.msg])}});const _=s({__name:"JsxTest",setup(e){return(p,c)=>(a(),u(n(o),{msg:"\u8FD9\u662F\u4E00\u4E2A tsx \u7684\u7EC4\u4EF6"}))}});var x=r(_,[["__file","JsxTest.vue"]]);export{x as default};

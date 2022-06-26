@@ -1,0 +1,1 @@
+import t from"./Button.6e0fa105.js";import{_ as e,o,q as s,w as _,b as a}from"./app.1cc4796f.js";const r=a("button test"),n={__name:"ButtonTest",setup(u){return(c,p)=>(o(),s(t,null,{default:_(()=>[r]),_:1}))}};var m=e(n,[["__file","ButtonTest.vue"]]);export{m as default};

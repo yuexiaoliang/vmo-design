@@ -1,0 +1,1 @@
+const e={key:"v-9f10aebe",path:"/en/components/JsxTest/",title:"JsxTest Component",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1656227595e3,contributors:[{name:"yuexiaoliang",email:"2220124666@qq.com",commits:1}]},filePathRelative:"components/JsxTest/index.en-US.md"};export{e as data};

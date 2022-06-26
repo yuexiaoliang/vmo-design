@@ -1,0 +1,1 @@
+const e={key:"v-9397f63e",path:"/en/guide/",title:"Get started quickly",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1656227595e3,contributors:[{name:"yuexiaoliang",email:"2220124666@qq.com",commits:1}]},filePathRelative:"docs/guide/index.en-US.md"};export{e as data};
