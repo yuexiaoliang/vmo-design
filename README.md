@@ -8,10 +8,10 @@
 - [x] pnpm
 - [x] vite
 - [x] vitest
-- [ ] vue3
+- [x] vue3
 - [x] typescript
-- [ ] tsx
-- [ ] vue-tsc
+- [k] tsx
+- [x] vue-tsc
 - [ ] Tailwind css
 - [ ] eslint
 - [ ] stylelint

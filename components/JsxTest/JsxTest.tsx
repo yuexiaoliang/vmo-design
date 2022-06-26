@@ -1,4 +1,5 @@
-import { defineComponent, defineProps } from 'vue';
+import { defineComponent } from 'vue';
+import './styles/index.scss';
 
 export default defineComponent({
   name: 'JsxTest',
@@ -6,6 +7,13 @@ export default defineComponent({
     msg: String
   },
   setup(props) {
-    return () => <div>{props.msg}</div>;
+    const click = () => {
+      console.log('JsxTest click!');
+    };
+    return () => (
+      <div class='vmo-jsxtest' onClick={click}>
+        {props.msg}
+      </div>
+    );
   }
 });

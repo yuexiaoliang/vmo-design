@@ -1,5 +1,7 @@
 <template>
-  <button class="vmo-button"><slot></slot></button>
+  <button class="vmo-button">
+    <slot></slot>
+  </button>
 </template>
 
 <script setup></script>

@@ -1,18 +1,38 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
+    "target": "es6",
+    "module": "es6",
+    "baseUrl": "./",
     "lib": [
       "ESNext",
+      "DOM",
+      "DOM.Iterable"
     ],
+    "strictNullChecks": false,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
     "declaration": true,
     "declarationDir": "./types/",
-    "emitDeclarationOnly": true,
-    "rootDir": "./src",
-    "moduleResolution": "Node",
-    "jsx": "preserve"
+    "experimentalDecorators": true,
+    "jsx": "preserve",
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": false,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "importsNotUsedAsValues": "preserve"
   },
+  "exclude": [
+    "**/__tests__/**/*",
+    "coverage",
+    ".logs",
+    "node_modules",
+    "dist",
+    "docs"
+  ],
   "include": [
-    "src"
+    ".vuepress",
+    "components",
+    "utils"
   ]
 }
